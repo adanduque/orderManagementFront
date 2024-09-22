@@ -1,0 +1,71 @@
+<div class="form-container">
+    <h2>Complete Your Personal Details</h2>
+
+    <form [formGroup]="customerForm" (ngSubmit)="onSubmit()">
+        <mat-form-field appearance="outline" class="input-text" floatLabel="always">
+            <mat-label>First Name</mat-label>
+            <input matInput formControlName="firstName" placeholder="Enter your first name" required>
+            <mat-error *ngIf="customerForm.get('firstName')?.invalid && customerForm.get('firstName')?.touched">
+                First name is required.
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="input-text" floatLabel="always">
+            <mat-label>Last Name</mat-label>
+            <input matInput formControlName="lastName" placeholder="Enter your last name" required>
+            <mat-error *ngIf="customerForm.get('lastName')?.invalid && customerForm.get('lastName')?.touched">
+                Last name is required.
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="input-text" floatLabel="always">
+            <mat-label>Email</mat-label>
+            <input matInput type="email" formControlName="email" placeholder="Enter your email" required>
+            <mat-error *ngIf="customerForm.get('email')?.invalid && customerForm.get('email')?.touched">
+                Valid email is required.
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="input-text" floatLabel="always">
+            <mat-label>Phone Number</mat-label>
+            <input matInput type="tel" formControlName="phone" placeholder="Enter your phone number" required>
+            <mat-error *ngIf="customerForm.get('phone')?.invalid && customerForm.get('phone')?.touched">
+                Phone number is required.
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="input-text" floatLabel="always">
+            <mat-label>Address</mat-label>
+            <input matInput formControlName="address" placeholder="Enter your address" required>
+            <mat-error *ngIf="customerForm.get('address')?.invalid && customerForm.get('address')?.touched">
+                Address is required.
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="input-text" floatLabel="always">
+            <mat-label>Type of Document</mat-label>
+            <mat-select formControlName="typeDocument" required>
+                <mat-option value="1">ID</mat-option>
+                <mat-option value="2">Passport</mat-option>
+                <mat-option value="3">Driver's License</mat-option>
+            </mat-select>
+            <mat-error *ngIf="customerForm.get('typeDocument')?.invalid && customerForm.get('typeDocument')?.touched">
+                Document type is required.
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="input-text" floatLabel="always">
+            <mat-label>Document Number</mat-label>
+            <input matInput formControlName="numDocument" placeholder="Enter your document number" required>
+            <mat-error *ngIf="customerForm.get('numDocument')?.invalid && customerForm.get('numDocument')?.touched">
+                Document number is required.
+            </mat-error>
+        </mat-form-field>
+
+        <div class="button-container">
+            <button mat-raised-button color="primary" class="submit-button" type="submit" [disabled]="customerForm.invalid">Create Account</button>
+            <button mat-button class="login-button" (click)="goToLogin()">Go to Login</button>
+        </div>
+
+    </form>
+</div>

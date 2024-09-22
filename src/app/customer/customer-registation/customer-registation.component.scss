@@ -1,0 +1,39 @@
+.form-container {
+    max-width: 400px;
+    /* Ajusta el ancho del contenedor */
+    margin: 20px auto;
+    /* Centra el contenedor */
+    padding: 20px;
+    /* Espaciado interno */
+    border-radius: 8px;
+    /* Bordes redondeados */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* Sombra suave */
+    background-color: #fff;
+    /* Fondo blanco */
+}
+
+.input-text {
+    width: 100%;
+    /* Ancho completo */
+    margin-bottom: 16px;
+    /* Espacio entre campos */
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    button {
+        margin-right: 10px;
+        width: 50%;
+    }
+    .login-button {
+        background-color: green; // Color de fondo verde
+        color: white; // Color del texto blanco
+        border: none; // Eliminar borde
+        &:hover {
+            background-color: darkgreen; // Color más oscuro al pasar el mouse
+        }
+    }
+}

@@ -1,0 +1,31 @@
+.example-spacer {
+    flex: 1 1 auto;
+    /* Esto hace que el espaciador ocupe el espacio disponible */
+}
+
+.cart-details {
+    position: absolute;
+    /* Posiciona en relación al contenedor padre */
+    top: 60px;
+    /* Ajusta según la altura del ícono */
+    right: 10px;
+    /* Alinea a la izquierda del ícono, puedes ajustar el valor si es necesario */
+    background-color: white;
+    /* Fondo blanco */
+    color: #000;
+    /* Fondo blanco */
+    border: 1px solid #ccc;
+    /* Borde gris claro */
+    border-radius: 4px;
+    /* Bordes redondeados */
+    padding: 15px;
+    /* Espaciado interno */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* Sombra sutil */
+    z-index: 1000;
+    /* Asegura que esté por encima de otros elementos */
+    width: 300px;
+    /* Ancho del menú */
+    transition: all 0.2s ease-in-out;
+    /* Transición suave */
+}

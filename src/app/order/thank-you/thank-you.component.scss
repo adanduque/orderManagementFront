@@ -1,0 +1,28 @@
+.thank-you-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.thank-you-container h1 {
+    color: #4CAF50;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.thank-you-container p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 1em;
+    text-decoration: none;
+    color: white;
+    background-color: #4CAF50;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}

@@ -1,0 +1,27 @@
+<mat-card class="order-summary">
+    <mat-card-header>
+        <mat-card-title class="order-summary-title">Complete Your Order</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+        <h3>Customer Information</h3>
+        <div class="customer-info">
+            <p><strong>First Name:</strong> {{ customer.firstName }}</p>
+            <p><strong>Email:</strong> {{ customer.email }}</p>
+            <p><strong>Phone:</strong> {{ customer.phone }}</p>
+        </div>
+
+        <h3>Order Summary</h3>
+        <div *ngFor="let item of products" class="product-item">
+            <p class="product-name">{{ item.product.name }} - {{ item.quantityRequest }} x {{ item.product.price | currency }}</p>
+            <p class="product-total">Total: {{ (item.product.price * item.quantityRequest) | currency }}</p>
+        </div>
+
+        <h4 class="total-amount">Total Amount: {{ getTotalAmount() | currency }}</h4>
+    </mat-card-content>
+
+    <mat-card-actions class="actions">
+        <button mat-raised-button color="primary" class="complete-order-btn" (click)="completeOrder()">Complete Order</button>
+        <button mat-stroked-button color="accent" class="back-to-cart-btn" (click)="goBack()">Back to Cart</button>
+    </mat-card-actions>
+</mat-card>
