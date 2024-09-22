@@ -3,8 +3,8 @@ import { CommonModule } from '@angular/common';
 import { CustomerRegistationComponent } from './customer-registation/customer-registation.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { MaterialModule } from '../material/material.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MaterialModule } from 'src/app/material/material.module';
 
 
 

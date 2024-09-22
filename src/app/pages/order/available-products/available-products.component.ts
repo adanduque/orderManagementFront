@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { OrderService } from '../../service/order.service';
 import { ProductService } from 'src/app/service/product.service';
 import { ProductModel } from 'src/app/models/ProductModel';
+import { OrderService } from 'src/app/service/order.service';
 
 @Component({
   selector: 'app-available-products',

@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { OrderService } from '../service/order.service';
 import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
-import { OrderItemI } from '../interface/OrderRequest';
+import { OrderService } from '../../service/order.service';
+import { OrderItemI } from '../../interface/OrderRequest';
 
 @Component({
   selector: 'app-toolbar',
