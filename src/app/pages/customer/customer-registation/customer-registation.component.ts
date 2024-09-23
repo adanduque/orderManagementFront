@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Customer } from 'src/app/models/Customer';
 import { CustomerService } from 'src/app/service/customer.service';
 import Swal from 'sweetalert2';
-import { Router } from '@angular/router'; // Importa Router
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-customer-registation',
@@ -27,7 +26,6 @@ export class CustomerRegistationComponent {
 
   ngOnInit(): void {}
 
-  // Método para guardar el cliente
   onSubmit(): void {
     if (this.customerForm.valid) {
       const customer = this.customerForm.value;
@@ -39,7 +37,7 @@ export class CustomerRegistationComponent {
             icon: 'success',
             confirmButtonText: 'Aceptar',
           }).then(() => {
-            this.router.navigate(['/login']); // Redirigir al login después de aceptar
+            this.router.navigate(['/login']);
           });
 
           // Limpia el formulario
@@ -67,6 +65,6 @@ export class CustomerRegistationComponent {
 
   // Método para redirigir al login
   goToLogin(): void {
-    this.router.navigate(['/login']); // Cambia esto según la ruta de tu login
+    this.router.navigate(['/login']);
   }
 }

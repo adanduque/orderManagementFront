@@ -15,8 +15,6 @@ export class ProductModel {
     this.stock = data.stock;
   }
 
-
-  // Getters
   public getId(): number {
     return this.id;
   }
@@ -33,7 +31,6 @@ export class ProductModel {
     return this.stock;
   }
 
-  // Setters
   public setIdProduct(id: number): void {
     this.id = id;
   }
@@ -50,7 +47,6 @@ export class ProductModel {
     this.stock = stock;
   }
 
-  // Método para convertir ProductModel a ProductI
   public toProductI(): ProductI {
     return {
       id: this.id,

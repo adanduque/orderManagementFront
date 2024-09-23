@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router'; // Importa Router
-import Swal from 'sweetalert2'; // Importa SweetAlert
+import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-login',
@@ -18,13 +18,11 @@ export class LoginComponent {
     });
   }
 
-  // Método para manejar el envío del formulario
+
   onSubmit(): void {
     if (this.loginForm.valid) {
       const { email, password } = this.loginForm.value;
 
-      // Aquí puedes agregar la lógica para autenticar al usuario
-      // Por ejemplo, llamar a un servicio de autenticación
 
       Swal.fire({
         title: 'Éxito',
@@ -32,7 +30,7 @@ export class LoginComponent {
         icon: 'success',
         confirmButtonText: 'Aceptar'
       }).then(() => {
-        this.router.navigate(['/dashboard']); // Redirige a otra página (por ejemplo, dashboard)
+        this.router.navigate(['/available-products']);
       });
     } else {
       Swal.fire({

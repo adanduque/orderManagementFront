@@ -38,6 +38,6 @@ export class AvailableProductsComponent {
     this._orderService.addProduct(product,1);
   }
   removeProductFromCart(productId:number) {
-    this._orderService.removeProduct(productId); // Llama al método de eliminar del carrito
+    this._orderService.removeProduct(productId);
   }
 }
